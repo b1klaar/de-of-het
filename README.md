@@ -1,7 +1,9 @@
 # De of het?
 
 Gratis trainer voor het Nederlandse lidwoord. Eén HTML-bestand, geen
-installatie, geen account, werkt offline. Open `index.html` en je oefent.
+installatie, geen account, werkt offline. Direct oefenen:
+**[b1klaar.github.io/de-of-het](https://b1klaar.github.io/de-of-het/)** —
+of download `index.html` en open het bestand zelf.
 
 - 291 woorden, elk met het lidwoord en de regel die het verklaart
 - 12 regels, met voorbeelden (zie onderaan de trainer)
@@ -47,5 +49,6 @@ komt van B1Klaar.
 
 Free de/het article trainer for Dutch learners. One HTML file, works
 offline, no dependencies. 291 words, each answer explained by one of 12
-rules. Built by [B1Klaar](https://b1klaar.hmdev.nl/), which makes exam
+rules. Try it live: [b1klaar.github.io/de-of-het](https://b1klaar.github.io/de-of-het/).
+Built by [B1Klaar](https://b1klaar.hmdev.nl/), which makes exam
 practice material for the Dutch inburgering and staatsexamen programs.
