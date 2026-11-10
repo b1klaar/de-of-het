@@ -1,0 +1,1802 @@
+{
+ "license_note": "Lidwoord-gegevens ontleend aan nl.wiktionary.org (CC BY-SA). Regelvoorbeeld-woorden volgen de B1Klaar-regelbank (product/cards/grammatica-lidwoorden.json).",
+ "checked_against": "nl.wiktionary.org API, 2026-11-05",
+ "rules": {
+  "1": {
+   "id": 1,
+   "rule": "de bij -heid, -teit en -ing"
+  },
+  "2": {
+   "id": 2,
+   "rule": "het bij -isme en -sel"
+  },
+  "3": {
+   "id": 3,
+   "rule": "Verkleinwoord op -je: altijd het"
+  },
+  "4": {
+   "id": 4,
+   "rule": "Infinitief als naamwoord: het"
+  },
+  "5": {
+   "id": 5,
+   "rule": "Talen: het"
+  },
+  "6": {
+   "id": 6,
+   "rule": "Metalen: het"
+  },
+  "7": {
+   "id": 7,
+   "rule": "Windstreken: het"
+  },
+  "8": {
+   "id": 8,
+   "rule": "Personen en beroepen: de"
+  },
+  "9": {
+   "id": 9,
+   "rule": "De meeste dieren: de"
+  },
+  "10": {
+   "id": 10,
+   "rule": "Samenstelling: het laatste woord beslist"
+  },
+  "11": {
+   "id": 11,
+   "rule": "Woorden met ge-: meestal het"
+  },
+  "12": {
+   "id": 12,
+   "rule": "Twijfel je? Kies de"
+  }
+ },
+ "words": [
+  {
+   "word": "aardappel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "aflevering",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "afspraak",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "angst",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "antwoord",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "apotheek",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "arts",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "auto",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "avond",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "baan",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "baby",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "badkamer",
+   "article": "de",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "banaan",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bank",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "batterij",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bed",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "belasting",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "berg",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bewijs",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bier",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bloed",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "boek",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bon",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "boompje",
+   "article": "het",
+   "rule": 3,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "bord",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bos",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "boter",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "boterham",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "brandweerman",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "brief",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "broer",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "brood",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "brug",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "burgemeester",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "bus",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "buurman",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "buurtbewoner",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "buurvrouw",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "centrum",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "chauffeur",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "collega",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "computer",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "contract",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "dak",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "deur",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "dief",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "diner",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "directeur",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "dochter",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "dokter",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "dorp",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "droom",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "economie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ei",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "eiland",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "energie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "Engels",
+   "article": "het",
+   "rule": 5,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "eten",
+   "article": "het",
+   "rule": 4,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "euro",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "examen",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "familie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "fiets",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "film",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "formulier",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "geld",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "geloof",
+   "article": "het",
+   "rule": 11,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gemeente",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "geschiedenis",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gesprek",
+   "article": "het",
+   "rule": 11,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gevaar",
+   "article": "het",
+   "rule": 11,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "gevoel",
+   "article": "het",
+   "rule": 11,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gewoonte",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gezicht",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "glas",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "godsdienst",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "goud",
+   "article": "het",
+   "rule": 6,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "gracht",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "grens",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "griep",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "groente",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "halte",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "hand",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "hart",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "herfst",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "hond",
+   "article": "de",
+   "rule": 9,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "hoofd",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "huid",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "huis",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "huisarts",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "huisje",
+   "article": "het",
+   "rule": 3,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "huiswerk",
+   "article": "het",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ijs",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "immigrant",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "integratie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "jaar",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kaas",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kabel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kamer",
+   "article": "de",
+   "rule": 10,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "kanaal",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kantoor",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kat",
+   "article": "de",
+   "rule": 9,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kerk",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "keuken",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kind",
+   "article": "het",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kinderkamer",
+   "article": "de",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kip",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "klant",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "klas",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "klok",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "knop",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koe",
+   "article": "de",
+   "rule": 9,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koelkast",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koffie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koning",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koningin",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "koorts",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "korting",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "krant",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kussen",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "kust",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lamp",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "land",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "laptop",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "leger",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lente",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lepel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "leraar",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lerares",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "les",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lichaam",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "licht",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lied",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "liefde",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lucht",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "lunch",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "maag",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "maan",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "maand",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "maatschappij",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "man",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "manager",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "meer",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "meisje",
+   "article": "het",
+   "rule": 3,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "melk",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "mengsel",
+   "article": "het",
+   "rule": 2,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "meter",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "meubel",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "middag",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "minuut",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "misdaad",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "moeder",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "mogelijkheid",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "moment",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "mond",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "morgen",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "moskee",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "muziek",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "nacht",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "Nederlands",
+   "article": "het",
+   "rule": 5,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "neus",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "nieuws",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "noorden",
+   "article": "het",
+   "rule": 7,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "omgeving",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ontbijt",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "oog",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "oorlog",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "oosten",
+   "article": "het",
+   "rule": 7,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "oplossing",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "oven",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "paard",
+   "article": "het",
+   "rule": 9,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "pan",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "papier",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "paspoort",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "passagier",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "pen",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "peper",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "plein",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "politieagent",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "politiek",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "potlood",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "president",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "prijs",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "probleem",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "programma",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "provincie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "raam",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "recht",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "rechter",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "regel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "regen",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "regering",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "reis",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "rekening",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "rijbewijs",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "rivier",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "rug",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "sap",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "saus",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "schaap",
+   "article": "het",
+   "rule": 9,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "scherm",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "school",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "serie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "sinaasappel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "slaapkamer",
+   "article": "de",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "slapen",
+   "article": "het",
+   "rule": 4,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "sleutel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "sneeuw",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "soep",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "soldaat",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "spiegel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "staal",
+   "article": "het",
+   "rule": 6,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "stad",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "station",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "stem",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ster",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "stoel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "stofzuiger",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "stopcontact",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "straat",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "straf",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "student",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "suiker",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "taal",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tafel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tand",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tandarts",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "telefoon",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "televisie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tempel",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "thee",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tijd",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "toerisme",
+   "article": "het",
+   "rule": 2,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "toets",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tomaat",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "traditie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "trein",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "tuin",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ui",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "uitkering",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "universiteit",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "uur",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vader",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vakantie",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "varken",
+   "article": "het",
+   "rule": 9,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vergadering",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "verhaal",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "verkeer",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "verkiezing",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "verpleegkundige",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vervoer",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "verzekering",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vinger",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vis",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vlees",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vliegtuig",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vloer",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vluchteling",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "voedsel",
+   "article": "het",
+   "rule": 2,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "voet",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vork",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vraag",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vrede",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vriend",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vriendin",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vrijheid",
+   "article": "de",
+   "rule": 1,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "vrouw",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wasmachine",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "water",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wens",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "werk",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wet",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wethouder",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wijk",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wijn",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wind",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "winkelen",
+   "article": "het",
+   "rule": 4,
+   "source": "regelbank (grammatica-lidwoorden.json)"
+  },
+  {
+   "word": "winter",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "wolk",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "woonkamer",
+   "article": "de",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "woordenboek",
+   "article": "het",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zee",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ziekenhuis",
+   "article": "het",
+   "rule": 10,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "ziekte",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zilver",
+   "article": "het",
+   "rule": 6,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zin",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zomer",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zon",
+   "article": "de",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zoon",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zout",
+   "article": "het",
+   "rule": 12,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zuiden",
+   "article": "het",
+   "rule": 7,
+   "source": "nl.wiktionary"
+  },
+  {
+   "word": "zus",
+   "article": "de",
+   "rule": 8,
+   "source": "nl.wiktionary"
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De of het? Gratis lidwoord-trainer voor het Nederlands</title>
+<meta name="description" content="Gratis trainer voor de of het. 291 woorden, 12 regels, directe uitleg per antwoord. Werkt offline, geen account.">
+<style>
+  :root {
+    --ink: #14213d; --muted: #5b6478; --line: #e3e7ef;
+    --ok: #0b7a3b; --ok-bg: #e7f6ec; --bad: #b3261e; --bad-bg: #fdeceb;
+    --brand: #1d4ed8; --brand-bg: #eef2ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink); background: #fafbfe; line-height: 1.5;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+  header h1 { font-size: 2rem; margin: 8px 0 4px; }
+  header p.sub { color: var(--muted); margin: 0 0 20px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 28px 22px; text-align: center; box-shadow: 0 1px 2px rgba(20,33,61,.04);
+  }
+  .word { font-size: 3rem; font-weight: 700; letter-spacing: .5px; margin: 10px 0 22px; }
+  .buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .buttons button {
+    font-size: 1.6rem; font-weight: 600; padding: 12px 42px; border-radius: 12px;
+    border: 2px solid var(--line); background: #fff; color: var(--ink); cursor: pointer;
+  }
+  .buttons button:hover { border-color: var(--brand); color: var(--brand); }
+  .buttons button:disabled { cursor: default; }
+  button.right { border-color: var(--ok); background: var(--ok-bg); color: var(--ok); }
+  button.wrong { border-color: var(--bad); background: var(--bad-bg); color: var(--bad); }
+  .feedback { min-height: 84px; margin-top: 20px; }
+  .feedback .verdict { font-size: 1.25rem; font-weight: 600; margin: 4px 0; }
+  .feedback .verdict.good { color: var(--ok); }
+  .feedback .verdict.bad { color: var(--bad); }
+  .chip {
+    display: inline-block; background: var(--brand-bg); color: var(--brand);
+    border-radius: 999px; padding: 4px 14px; font-size: .95rem; margin-top: 6px;
+  }
+  .scorebar {
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted); font-size: .95rem; margin: 14px 2px 6px;
+  }
+  .progress { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  .progress > div { height: 100%; background: var(--brand); width: 0; }
+  .modes { margin: 18px 0 6px; }
+  .modes button {
+    border: 1px solid var(--line); background: #fff; color: var(--muted);
+    border-radius: 999px; padding: 6px 16px; margin-right: 8px; cursor: pointer; font-size: .92rem;
+  }
+  .modes button.active { border-color: var(--brand); color: var(--brand); background: var(--brand-bg); }
+  .result h2 { margin: 4px 0 10px; }
+  .mistakes { text-align: left; margin: 14px auto 6px; max-width: 460px; }
+  .mistakes li { margin: 6px 0; }
+  .mistakes .chip { font-size: .82rem; padding: 2px 10px; }
+  details.rules { margin-top: 26px; }
+  details.rules summary { cursor: pointer; font-weight: 600; color: var(--brand); }
+  details.rules ol { padding-left: 22px; }
+  details.rules li { margin: 8px 0; }
+  details.rules .ex { color: var(--muted); }
+  footer {
+    margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .92rem;
+  }
+  footer a { color: var(--brand); }
+  .again {
+    margin-top: 16px; font-size: 1.05rem; font-weight: 600; color: #fff;
+    background: var(--brand); border: none; border-radius: 10px; padding: 10px 26px; cursor: pointer;
+  }
+</style>
+  <!-- built 291 words, 88 with a rule, from words.json -->
+</head>
+<body>
+<main>
+  <header>
+    <h1>De of het?</h1>
+    <p class="sub">Gratis trainer voor het Nederlandse lidwoord. Kies de of het en krijg direct de regel erbij.</p>
+  </header>
+
+  <div class="modes" id="modes">
+    <button data-mode="all" class="active">Alle woorden</button>
+    <button data-mode="rules">Alleen woorden met een regel</button>
+  </div>
+
+  <div class="scorebar">
+    <span id="score">0 goed van 0</span>
+    <span id="streak"></span>
+    <span id="left"></span>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+
+  <div class="card" id="quiz" hidden>
+    <div class="word" id="word"></div>
+    <div class="buttons">
+      <button id="btn-de" onclick="answer('de')">de</button>
+      <button id="btn-het" onclick="answer('het')">het</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <div class="card result" id="result" hidden>
+    <h2 id="result-title"></h2>
+    <p id="result-sub"></p>
+    <ol class="mistakes" id="mistakes"></ol>
+    <button class="again" onclick="startRound()">Opnieuw oefenen</button>
+  </div>
+
+  <details class="rules">
+    <summary>De 12 regels achter de antwoorden</summary>
+    <ol id="ruleslist"></ol>
+  </details>
+
+  <footer>
+    <p>Gemaakt door <a href="https://b1klaar.hmdev.nl/">B1Klaar</a>, oefenmateriaal voor inburgering en staatsexamen.
+    Meer uitleg en gratis oefendecks: <a href="https://b1klaar.hmdev.nl/grammatica-oefenen/">grammatica oefenen</a>.</p>
+    <p>Lidwoorden gecontroleerd tegen <a href="https://nl.wiktionary.org/">nl.wiktionary.org</a>. Regelwoorden uit de B1Klaar-regelbank.</p>
+  </footer>
+</main>
+
+<script>
+const RULES = [{"id": 1, "rule": "de bij -heid, -teit en -ing", "ex": "de mogelijkheid, de universiteit, de regering"}, {"id": 2, "rule": "het bij -isme en -sel", "ex": "het toerisme, het voedsel, het mengsel"}, {"id": 3, "rule": "Verkleinwoord op -je: altijd het", "ex": "het huisje, het meisje, het boompje"}, {"id": 4, "rule": "Infinitief als naamwoord: het", "ex": "het eten, het slapen, het winkelen"}, {"id": 5, "rule": "Talen: het", "ex": "het Nederlands, het Engels"}, {"id": 6, "rule": "Metalen: het", "ex": "het goud, het zilver, het staal"}, {"id": 7, "rule": "Windstreken: het", "ex": "het noorden, het zuiden, het oosten"}, {"id": 8, "rule": "Personen en beroepen: de", "ex": "de leraar, de dokter, de student"}, {"id": 9, "rule": "De meeste dieren: de", "ex": "de hond, de kat, de koe"}, {"id": 10, "rule": "Samenstelling: het laatste woord beslist", "ex": "het ziekenhuis (het huis), de kinderkamer (de kamer)"}, {"id": 11, "rule": "Woorden met ge-: meestal het", "ex": "het gevaar, het gevoel, het gesprek"}, {"id": 12, "rule": "Twijfel je? Kies de", "ex": "de tafel, de stoel, de deur"}];
+const WORDS = [{"w": "aardappel", "a": "de", "r": 12}, {"w": "aflevering", "a": "de", "r": 1}, {"w": "afspraak", "a": "de", "r": 12}, {"w": "angst", "a": "de", "r": 12}, {"w": "antwoord", "a": "het", "r": 12}, {"w": "apotheek", "a": "de", "r": 12}, {"w": "arts", "a": "de", "r": 8}, {"w": "auto", "a": "de", "r": 12}, {"w": "avond", "a": "de", "r": 12}, {"w": "baan", "a": "de", "r": 12}, {"w": "baby", "a": "de", "r": 8}, {"w": "badkamer", "a": "de", "r": 10}, {"w": "banaan", "a": "de", "r": 12}, {"w": "bank", "a": "de", "r": 12}, {"w": "batterij", "a": "de", "r": 12}, {"w": "bed", "a": "het", "r": 12}, {"w": "belasting", "a": "de", "r": 1}, {"w": "berg", "a": "de", "r": 12}, {"w": "bewijs", "a": "het", "r": 12}, {"w": "bier", "a": "het", "r": 12}, {"w": "bloed", "a": "het", "r": 12}, {"w": "boek", "a": "het", "r": 12}, {"w": "bon", "a": "de", "r": 12}, {"w": "boompje", "a": "het", "r": 3}, {"w": "bord", "a": "het", "r": 12}, {"w": "bos", "a": "het", "r": 12}, {"w": "boter", "a": "de", "r": 12}, {"w": "boterham", "a": "de", "r": 12}, {"w": "brandweerman", "a": "de", "r": 8}, {"w": "brief", "a": "de", "r": 12}, {"w": "broer", "a": "de", "r": 8}, {"w": "brood", "a": "het", "r": 12}, {"w": "brug", "a": "de", "r": 12}, {"w": "burgemeester", "a": "de", "r": 8}, {"w": "bus", "a": "de", "r": 12}, {"w": "buurman", "a": "de", "r": 8}, {"w": "buurtbewoner", "a": "de", "r": 8}, {"w": "buurvrouw", "a": "de", "r": 8}, {"w": "centrum", "a": "het", "r": 12}, {"w": "chauffeur", "a": "de", "r": 8}, {"w": "collega", "a": "de", "r": 8}, {"w": "computer", "a": "de", "r": 12}, {"w": "contract", "a": "het", "r": 12}, {"w": "dak", "a": "het", "r": 12}, {"w": "deur", "a": "de", "r": 12}, {"w": "dief", "a": "de", "r": 8}, {"w": "diner", "a": "het", "r": 12}, {"w": "directeur", "a": "de", "r": 8}, {"w": "dochter", "a": "de", "r": 8}, {"w": "dokter", "a": "de", "r": 8}, {"w": "dorp", "a": "het", "r": 12}, {"w": "droom", "a": "de", "r": 12}, {"w": "economie", "a": "de", "r": 12}, {"w": "ei", "a": "het", "r": 12}, {"w": "eiland", "a": "het", "r": 12}, {"w": "energie", "a": "de", "r": 12}, {"w": "Engels", "a": "het", "r": 5}, {"w": "eten", "a": "het", "r": 4}, {"w": "euro", "a": "de", "r": 12}, {"w": "examen", "a": "het", "r": 12}, {"w": "familie", "a": "de", "r": 12}, {"w": "fiets", "a": "de", "r": 12}, {"w": "film", "a": "de", "r": 12}, {"w": "formulier", "a": "het", "r": 12}, {"w": "geld", "a": "het", "r": 12}, {"w": "geloof", "a": "het", "r": 11}, {"w": "gemeente", "a": "de", "r": 12}, {"w": "geschiedenis", "a": "de", "r": 12}, {"w": "gesprek", "a": "het", "r": 11}, {"w": "gevaar", "a": "het", "r": 11}, {"w": "gevoel", "a": "het", "r": 11}, {"w": "gewoonte", "a": "de", "r": 12}, {"w": "gezicht", "a": "het", "r": 12}, {"w": "glas", "a": "het", "r": 12}, {"w": "godsdienst", "a": "de", "r": 12}, {"w": "goud", "a": "het", "r": 6}, {"w": "gracht", "a": "de", "r": 12}, {"w": "grens", "a": "de", "r": 12}, {"w": "griep", "a": "de", "r": 12}, {"w": "groente", "a": "de", "r": 12}, {"w": "halte", "a": "de", "r": 12}, {"w": "hand", "a": "de", "r": 12}, {"w": "hart", "a": "het", "r": 12}, {"w": "herfst", "a": "de", "r": 12}, {"w": "hond", "a": "de", "r": 9}, {"w": "hoofd", "a": "het", "r": 12}, {"w": "huid", "a": "de", "r": 12}, {"w": "huis", "a": "het", "r": 12}, {"w": "huisarts", "a": "de", "r": 8}, {"w": "huisje", "a": "het", "r": 3}, {"w": "huiswerk", "a": "het", "r": 10}, {"w": "ijs", "a": "het", "r": 12}, {"w": "immigrant", "a": "de", "r": 8}, {"w": "integratie", "a": "de", "r": 12}, {"w": "jaar", "a": "het", "r": 12}, {"w": "kaas", "a": "de", "r": 12}, {"w": "kabel", "a": "de", "r": 12}, {"w": "kamer", "a": "de", "r": 10}, {"w": "kanaal", "a": "het", "r": 12}, {"w": "kantoor", "a": "het", "r": 12}, {"w": "kat", "a": "de", "r": 9}, {"w": "kerk", "a": "de", "r": 12}, {"w": "keuken", "a": "de", "r": 12}, {"w": "kind", "a": "het", "r": 8}, {"w": "kinderkamer", "a": "de", "r": 10}, {"w": "kip", "a": "de", "r": 12}, {"w": "klant", "a": "de", "r": 8}, {"w": "klas", "a": "de", "r": 12}, {"w": "klok", "a": "de", "r": 12}, {"w": "knop", "a": "de", "r": 12}, {"w": "koe", "a": "de", "r": 9}, {"w": "koelkast", "a": "de", "r": 12}, {"w": "koffie", "a": "de", "r": 12}, {"w": "koning", "a": "de", "r": 8}, {"w": "koningin", "a": "de", "r": 8}, {"w": "koorts", "a": "de", "r": 12}, {"w": "korting", "a": "de", "r": 12}, {"w": "krant", "a": "de", "r": 12}, {"w": "kussen", "a": "het", "r": 12}, {"w": "kust", "a": "de", "r": 12}, {"w": "lamp", "a": "de", "r": 12}, {"w": "land", "a": "het", "r": 12}, {"w": "laptop", "a": "de", "r": 12}, {"w": "leger", "a": "het", "r": 12}, {"w": "lente", "a": "de", "r": 12}, {"w": "lepel", "a": "de", "r": 12}, {"w": "leraar", "a": "de", "r": 8}, {"w": "lerares", "a": "de", "r": 8}, {"w": "les", "a": "de", "r": 12}, {"w": "lichaam", "a": "het", "r": 12}, {"w": "licht", "a": "het", "r": 12}, {"w": "lied", "a": "het", "r": 12}, {"w": "liefde", "a": "de", "r": 12}, {"w": "lucht", "a": "de", "r": 12}, {"w": "lunch", "a": "de", "r": 12}, {"w": "maag", "a": "de", "r": 12}, {"w": "maan", "a": "de", "r": 12}, {"w": "maand", "a": "de", "r": 12}, {"w": "maatschappij", "a": "de", "r": 12}, {"w": "man", "a": "de", "r": 8}, {"w": "manager", "a": "de", "r": 8}, {"w": "meer", "a": "het", "r": 12}, {"w": "meisje", "a": "het", "r": 3}, {"w": "melk", "a": "de", "r": 12}, {"w": "mengsel", "a": "het", "r": 2}, {"w": "meter", "a": "de", "r": 12}, {"w": "meubel", "a": "het", "r": 12}, {"w": "middag", "a": "de", "r": 12}, {"w": "minuut", "a": "de", "r": 12}, {"w": "misdaad", "a": "de", "r": 12}, {"w": "moeder", "a": "de", "r": 8}, {"w": "mogelijkheid", "a": "de", "r": 1}, {"w": "moment", "a": "het", "r": 12}, {"w": "mond", "a": "de", "r": 12}, {"w": "morgen", "a": "de", "r": 12}, {"w": "moskee", "a": "de", "r": 12}, {"w": "muziek", "a": "de", "r": 12}, {"w": "nacht", "a": "de", "r": 12}, {"w": "Nederlands", "a": "het", "r": 5}, {"w": "neus", "a": "de", "r": 12}, {"w": "nieuws", "a": "het", "r": 12}, {"w": "noorden", "a": "het", "r": 7}, {"w": "omgeving", "a": "de", "r": 1}, {"w": "ontbijt", "a": "het", "r": 12}, {"w": "oog", "a": "het", "r": 12}, {"w": "oorlog", "a": "de", "r": 12}, {"w": "oosten", "a": "het", "r": 7}, {"w": "oplossing", "a": "de", "r": 1}, {"w": "oven", "a": "de", "r": 12}, {"w": "paard", "a": "het", "r": 9}, {"w": "pan", "a": "de", "r": 12}, {"w": "papier", "a": "het", "r": 12}, {"w": "paspoort", "a": "het", "r": 12}, {"w": "passagier", "a": "de", "r": 8}, {"w": "pen", "a": "de", "r": 12}, {"w": "peper", "a": "de", "r": 12}, {"w": "plein", "a": "het", "r": 12}, {"w": "politieagent", "a": "de", "r": 8}, {"w": "politiek", "a": "de", "r": 12}, {"w": "potlood", "a": "het", "r": 12}, {"w": "president", "a": "de", "r": 8}, {"w": "prijs", "a": "de", "r": 12}, {"w": "probleem", "a": "het", "r": 12}, {"w": "programma", "a": "het", "r": 12}, {"w": "provincie", "a": "de", "r": 12}, {"w": "raam", "a": "het", "r": 12}, {"w": "recht", "a": "het", "r": 12}, {"w": "rechter", "a": "de", "r": 8}, {"w": "regel", "a": "de", "r": 12}, {"w": "regen", "a": "de", "r": 12}, {"w": "regering", "a": "de", "r": 1}, {"w": "reis", "a": "de", "r": 12}, {"w": "rekening", "a": "de", "r": 12}, {"w": "rijbewijs", "a": "het", "r": 12}, {"w": "rivier", "a": "de", "r": 12}, {"w": "rug", "a": "de", "r": 12}, {"w": "sap", "a": "het", "r": 12}, {"w": "saus", "a": "de", "r": 12}, {"w": "schaap", "a": "het", "r": 9}, {"w": "scherm", "a": "het", "r": 12}, {"w": "school", "a": "de", "r": 12}, {"w": "serie", "a": "de", "r": 12}, {"w": "sinaasappel", "a": "de", "r": 12}, {"w": "slaapkamer", "a": "de", "r": 10}, {"w": "slapen", "a": "het", "r": 4}, {"w": "sleutel", "a": "de", "r": 12}, {"w": "sneeuw", "a": "de", "r": 12}, {"w": "soep", "a": "de", "r": 12}, {"w": "soldaat", "a": "de", "r": 8}, {"w": "spiegel", "a": "de", "r": 12}, {"w": "staal", "a": "het", "r": 6}, {"w": "stad", "a": "de", "r": 12}, {"w": "station", "a": "het", "r": 12}, {"w": "stem", "a": "de", "r": 12}, {"w": "ster", "a": "de", "r": 12}, {"w": "stoel", "a": "de", "r": 12}, {"w": "stofzuiger", "a": "de", "r": 12}, {"w": "stopcontact", "a": "het", "r": 12}, {"w": "straat", "a": "de", "r": 12}, {"w": "straf", "a": "de", "r": 12}, {"w": "student", "a": "de", "r": 8}, {"w": "suiker", "a": "de", "r": 12}, {"w": "taal", "a": "de", "r": 12}, {"w": "tafel", "a": "de", "r": 12}, {"w": "tand", "a": "de", "r": 12}, {"w": "tandarts", "a": "de", "r": 8}, {"w": "telefoon", "a": "de", "r": 12}, {"w": "televisie", "a": "de", "r": 12}, {"w": "tempel", "a": "de", "r": 12}, {"w": "thee", "a": "de", "r": 12}, {"w": "tijd", "a": "de", "r": 12}, {"w": "toerisme", "a": "het", "r": 2}, {"w": "toets", "a": "de", "r": 12}, {"w": "tomaat", "a": "de", "r": 12}, {"w": "traditie", "a": "de", "r": 12}, {"w": "trein", "a": "de", "r": 12}, {"w": "tuin", "a": "de", "r": 12}, {"w": "ui", "a": "de", "r": 12}, {"w": "uitkering", "a": "de", "r": 1}, {"w": "universiteit", "a": "de", "r": 1}, {"w": "uur", "a": "het", "r": 12}, {"w": "vader", "a": "de", "r": 8}, {"w": "vakantie", "a": "de", "r": 12}, {"w": "varken", "a": "het", "r": 9}, {"w": "vergadering", "a": "de", "r": 1}, {"w": "verhaal", "a": "het", "r": 12}, {"w": "verkeer", "a": "het", "r": 12}, {"w": "verkiezing", "a": "de", "r": 1}, {"w": "verpleegkundige", "a": "de", "r": 8}, {"w": "vervoer", "a": "het", "r": 12}, {"w": "verzekering", "a": "de", "r": 1}, {"w": "vinger", "a": "de", "r": 12}, {"w": "vis", "a": "de", "r": 12}, {"w": "vlees", "a": "het", "r": 12}, {"w": "vliegtuig", "a": "het", "r": 12}, {"w": "vloer", "a": "de", "r": 12}, {"w": "vluchteling", "a": "de", "r": 8}, {"w": "voedsel", "a": "het", "r": 2}, {"w": "voet", "a": "de", "r": 12}, {"w": "vork", "a": "de", "r": 12}, {"w": "vraag", "a": "de", "r": 12}, {"w": "vrede", "a": "de", "r": 12}, {"w": "vriend", "a": "de", "r": 8}, {"w": "vriendin", "a": "de", "r": 8}, {"w": "vrijheid", "a": "de", "r": 1}, {"w": "vrouw", "a": "de", "r": 8}, {"w": "wasmachine", "a": "de", "r": 12}, {"w": "water", "a": "het", "r": 12}, {"w": "wens", "a": "de", "r": 12}, {"w": "werk", "a": "het", "r": 12}, {"w": "wet", "a": "de", "r": 12}, {"w": "wethouder", "a": "de", "r": 8}, {"w": "wijk", "a": "de", "r": 12}, {"w": "wijn", "a": "de", "r": 12}, {"w": "wind", "a": "de", "r": 12}, {"w": "winkelen", "a": "het", "r": 4}, {"w": "winter", "a": "de", "r": 12}, {"w": "wolk", "a": "de", "r": 12}, {"w": "woonkamer", "a": "de", "r": 10}, {"w": "woordenboek", "a": "het", "r": 10}, {"w": "zee", "a": "de", "r": 12}, {"w": "ziekenhuis", "a": "het", "r": 10}, {"w": "ziekte", "a": "de", "r": 12}, {"w": "zilver", "a": "het", "r": 6}, {"w": "zin", "a": "de", "r": 12}, {"w": "zomer", "a": "de", "r": 12}, {"w": "zon", "a": "de", "r": 12}, {"w": "zoon", "a": "de", "r": 8}, {"w": "zout", "a": "het", "r": 12}, {"w": "zuiden", "a": "het", "r": 7}, {"w": "zus", "a": "de", "r": 8}];
+const SHORT = {
+  1: "-heid, -teit, -ing altijd de",
+  2: "-isme, -sel altijd het",
+  3: "verkleinwoord op -je: het",
+  4: "infinitief als naamwoord: het",
+  5: "talen: het",
+  6: "metalen: het",
+  7: "windstreken: het",
+  8: "personen en beroepen: de",
+  9: "de meeste dieren: de",
+  10: "samenstelling: laatste woord beslist",
+  11: "ge- woorden: meestal het",
+  12: "geen regel: circa 75 procent is de"
+};
+const ROUND = 20;
+let mode = "all", queue = [], idx = 0, good = 0, streak = 0, best = 0, mistakes = [], answered = false;
+
+function el(id) { return document.getElementById(id); }
+
+function buildRulesList() {
+  el("ruleslist").innerHTML = RULES.map(r =>
+    `<li>${r.rule}<br><span class="ex">${r.ex}</span></li>`).join("");
+}
+
+function startRound() {
+  let pool = WORDS.filter(w => mode === "all" || w.r !== 12);
+  pool = shuffle(pool.slice());
+  queue = pool.slice(0, ROUND);
+  idx = 0; good = 0; streak = 0; best = 0; mistakes = [];
+  el("result").hidden = true;
+  el("quiz").hidden = false;
+  next();
+}
+
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function next() {
+  if (idx >= queue.length) return finish();
+  answered = false;
+  el("word").textContent = queue[idx].w;
+  el("feedback").innerHTML = "";
+  el("btn-de").disabled = false;
+  el("btn-het").disabled = false;
+  el("btn-de").className = "";
+  el("btn-het").className = "";
+  updateBar();
+}
+
+function answer(a) {
+  if (answered) return;
+  answered = true;
+  const cur = queue[idx];
+  const btn = a === "de" ? el("btn-de") : el("btn-het");
+  const other = a === "de" ? el("btn-het") : el("btn-de");
+  btn.disabled = other.disabled = true;
+  const ok = a === cur.a;
+  if (ok) {
+    btn.classList.add("right");
+    good++; streak++; best = Math.max(best, streak);
+  } else {
+    btn.classList.add("wrong");
+    other.classList.add("right");
+    streak = 0;
+    mistakes.push(cur);
+  }
+  const ruleShort = cur.r === 12 ? "Geen regel voor dit woord. Ongeveer 75 procent is de, de rest leer je uit je hoofd." : SHORT[cur.r];
+  el("feedback").innerHTML =
+    `<div class="verdict ${ok ? "good" : "bad"}">${ok ? "Goed" : "Het is " + cur.a + " " + cur.w}</div>` +
+    `<span class="chip">${ruleShort}</span>`;
+  idx++;
+  updateBar();
+  setTimeout(next, ok ? 450 : 1400);
+}
+
+function updateBar() {
+  el("score").textContent = `${good} goed van ${idx}`;
+  el("streak").textContent = streak > 1 ? streak + " op een rij" : "";
+  el("left").textContent = `${queue.length - idx} te gaan`;
+  el("bar").style.width = (idx / queue.length * 100) + "%";
+}
+
+function finish() {
+  el("quiz").hidden = true;
+  el("result").hidden = false;
+  el("result-title").textContent = `${good} van ${queue.length} goed`;
+  el("result-sub").textContent = good === queue.length
+    ? "Alles goed. Probeer de andere modus of ga door met een nieuwe ronde."
+    : "Dit waren de missers. De regel staat erbij.";
+  el("mistakes").innerHTML = mistakes.map(m =>
+    `<li><strong>${m.a} ${m.w}</strong> <span class="chip">${m.r === 12 ? "geen regel, uit je hoofd leren" : SHORT[m.r]}</span></li>`
+  ).join("") || "";
+}
+
+document.querySelectorAll("#modes button").forEach(b => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll("#modes button").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    mode = b.dataset.mode;
+    startRound();
+  });
+});
+
+buildRulesList();
+startRound();
+</script>
+</body>
+</html>
